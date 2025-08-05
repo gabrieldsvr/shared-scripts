@@ -1,0 +1,12 @@
+{
+  "name": "@seunome/shared-scripts",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "download-s3-files": "scripts/downloadS3Files.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
