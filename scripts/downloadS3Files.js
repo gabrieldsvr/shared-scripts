@@ -17,6 +17,7 @@ validateEnv();
 
 // ✅ Removido o segundo const BUCKET
 const BUCKET = process.env.BUCKET;
+console.log(`[SHARED] Usando o bucket: ${BUCKET}`);
 if (!BUCKET) {
     console.error('❌ BUCKET não está definido.');
     process.exit(1);
@@ -36,6 +37,7 @@ try {
     process.exit(1);
 }
 
+console.log(`[SHARED] Arquivos a serem baixados: ${JSON.stringify(AWS_FILES, null, 2)}`);
 downloadS3Files().then(() => {
     console.log('[SHARED] ✅ Todos os arquivos foram baixados com sucesso.');
 }).catch(error => {
